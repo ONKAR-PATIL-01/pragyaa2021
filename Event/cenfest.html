@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' >
+  <link href="css/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/animate.min.css">
+
+  <title>Cenfest</title>
+  <style>
+    @import url('http://fonts.cdnfonts.com/css/batman-forever');
+
+    body {
+      background-image: url('images/background.jpg');
+      overflow-x: hidden;
+      overflow-y: scroll;
+      width: 100%;
+    }
+
+    .pragyatitle {
+      font-family: 'BatmanForeverOutline', sans-serif;
+    }
+
+    .btns {
+      left: 46%;
+    }
+
+    .btn-contact {
+      bottom: 10px;
+      left: 47%;
+    }
+
+    .btn-close {
+      top: 10px;
+      left: 10px;
+    }
+
+    .contact-modal {
+      bottom: 80px;
+      left: 40%;
+    }
+
+    @media screen and (min-width: 720px) {
+      .btns {
+        left: 46%;
+      }
+
+      .btn-contact {
+        bottom: 10px;
+        left: 47%;
+      }
+
+      .btn-close {
+        top: 10px;
+        left: 10px;
+      }
+
+      .contact-modal {
+        bottom: 80px;
+        left: 40%;
+      }
+    }
+
+    @media screen and (max-width: 719px) {
+
+      .btn-contact {
+        bottom: 0;
+        left: 40%;
+      }
+
+      .contact-modal {
+        bottom: 8%;
+        left: 30%;
+      }
+
+    }
+
+    .logo {
+      height: 70px;
+      width: 70px;
+    }
+
+    #menu-toggle:checked+#menu {
+      display: block;
+    }
+
+    header {
+      background-color: rgb(31, 33, 34);
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+
+<body>
+
+  <header class="z-10 text-white fixed w-screen top-0 lg:px-8 px-6 flex flex-wrap items-center py-2">
+    <div class="flex-1 flex items-center">
+      <a href="#">
+        <img class="logo" src="images/pragya_logo.png" alt="Pragyaa Logo">
+      </a>
+      <span class="ml-3 text-xl pragyatitle">Pragyaa-2K21</span>
+    </div>
+
+    <label for="menu-toggle" class="pointer-cursor lg:hidden block"><svg class="fill-current text-white"
+        xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+        <title>menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+      </svg></label>
+    <input class="hidden" type="checkbox" id="menu-toggle" />
+
+    <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+      <nav>
+        <ul class="lg:flex items-center justify-between text-white pt-4 lg:pt-0">
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100"
+              href="/index.html">HOME</a></li>
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100"
+              href="/Event/events.html">EVENTS</a></li>
+          <!-- <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="#">Hospitality</a></li> -->
+
+          <div class="lg:p-4 py-3 px-0 flex items-center">
+            <div x-data="{ dropdownOpen: false }" class="relative">
+              <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block rounded focus:outline-none">
+               SPONSORSHIP
+              </button>
+
+              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+
+              <div x-show="dropdownOpen"
+                class="absolute left-0 mt-2 w-48 bg-white rounded-md overflow-hidden shadow-xl z-20">
+                <a href="/sponsor/sponsers.html"
+                  class="block px-4 py-2 text-sm font-bold text-white bg-blue-500">Sponsors</a>
+                <a href="/sponsor/Why sponser us.html"
+                  class="block px-4 py-2 text-sm font-bold text-white bg-blue-500">Why Sponsor Us?</a>
+                <a href="/sponsor/fund_as_alumini.pdf"
+                  class="block px-4 py-2 text-sm font-bold text-white bg-blue-500">Fund Us Through</a>
+              </div>
+            </div>
+          </div>
+
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100"
+              href="/Event/ourteam.html">OUR TEAM</a></li>
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100"
+              href="/Registration/registration2 (1).html">REGISTRATION</a></li>
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100"
+              href="/index.html#workshop">LECTURE SERIES</a></li>
+          <!-- <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100"
+              href="/Home/home.html#contact">Contact Us</a></li> -->
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100 lg:mb-0 mb-2"
+              href="/index.html#Aboutus">ABOUT US</a></li>
+        </ul>
+      </nav>
+    </div>
+
+  </header>
+
+  <div class="main mt-28">
+    <section class="text-gray-600 body-font">
+      <div
+        class="flex mt-8 mb-10 text-center justify-center text-white text-5xl font-bold animate__animated animate__backInDown">
+        <h1>CENFEST</h1>
+      </div>
+      <div class="container px-5 py-2 pb-20 mx-auto animate__animated animate__fadeInRight">
+        <div class="flex flex-wrap card-container mx-auto lg:flex-row lg:flex-nowrap md:flex-col lg:relative absolute">
+
+          <div class="card p-4 lg:w-1/3 lg:flex-none sm:flex-1">
+            <div class="border-2 border-gray-200 border-opacity-60 rounded-lg">
+              <img class="lg:h-56 md:h-36 w-screen object-cover object-center" src="images/masterblocks.png">
+              <div class="p-6 bg-gray-900 bg-opacity-70">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Comming Soon</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">Master Blocks</h1>
+                <p class="leading-relaxed text-gray-200 mb-3">Prize Amount: 1000</p>
+                <div class="flex items-center flex-wrap">
+                  <a id="master-blocks"
+                    class="text-blue-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer">Explore More
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-4 lg:w-1/3 lg:flex-none sm:flex-1">
+            <div class="border-2 border-gray-200 border-opacity-60 rounded-lg">
+              <img class="lg:h-56 md:h-36 w-screen object-cover object-center" src="images/civilinnovators.png">
+              <div class="p-6 bg-gray-900 bg-opacity-70">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Comming Soon</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">Civil Innovators PPT</h1>
+                <p class="leading-relaxed text-gray-200 mb-3">Prize Amount: 1000</p>
+                <div class="flex items-center flex-wrap">
+                  <a id="civil-innovators-ppt"
+                    class="text-blue-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer">Explore More
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-4 lg:w-1/3 lg:flex-none sm:flex-1">
+            <div class="border-2 border-gray-200 border-opacity-60 rounded-lg">
+              <img class="lg:h-56 md:h-36 w-screen object-cover object-center" src="images/builditup.png">
+              <div class="p-6 bg-gray-900">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Comming Soon</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">Build It Up</h1>
+                <p class="leading-relaxed text-gray-200 mb-3">Prize Amount: 1000</p>
+                <div class="flex items-center flex-wrap">
+                  <a id="build-it-up"
+                    class="text-blue-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer">Explore More
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-4 bg-opacity-70 lg:w-1/3 lg:flex-none sm:flex-1">
+            <div class="border-2 border-gray-200 border-opacity-60 rounded-lg">
+              <img class="lg:h-56 md:h-36 w-screen object-cover object-center" src="images/civiq.png">
+              <div class="p-6 bg-gray-900">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Comming Soon</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">Civi-Q</h1>
+                <p class="leading-relaxed text-gray-200 mb-3">Prize Amount: 1000</p>
+                <div class="flex items-center flex-wrap">
+                  <a id="civi-q" class="text-blue-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer">Explore
+                    More
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-4 bg-opacity-70 lg:w-1/3 lg:flex-none sm:flex-1">
+            <div class="border-2 border-gray-200 border-opacity-60 rounded-lg">
+              <img class="lg:h-56 md:h-36 w-screen object-cover object-center" src="images/civilcontractors.png">
+              <div class="p-6 bg-gray-900">
+                <h2 class="tracking-widest text-xs title-font font-medium text-gray-400 mb-1">Comming Soon</h2>
+                <h1 class="title-font text-lg font-medium text-white mb-3">Civil Contractor's League</h1>
+                <p class="leading-relaxed text-gray-200 mb-3">Prize Amount: 1000</p>
+                <div class="flex items-center flex-wrap">
+                  <a id="civil-contractors-league"
+                    class="text-blue-500 inline-flex items-center md:mb-2 lg:mb-0 cursor-pointer">Explore More
+                    <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path d="M5 12h14"></path>
+                      <path d="M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="btns absolute">
+          <button class="prevBtn text-white mr-2"><img src="images/left.svg" class="w-10 text-gray-400"></button>
+          <button class="nextBtn text-white ml-2"><img src="images/right.svg" class="w-10 text-gray-900"></button>
+        </div>
+
+
+        <div id="modal"
+          class="animate__animated animate__rollIn modal w-9/12 lg:h-5/6 absolute sm:left-2 lg:left-48 lg:top-10 bg-gray-900 bg-opacity-95 hidden">
+          <section class="text-gray-600 body-font h-full">
+            <div class="container px-5 py-16 mx-auto h-full">
+              <div class="flex flex-wrap flex-row -m-4 h-full">
+
+                <div class="p-1 h-full lg:w-1/2 md:w-full">
+                  <div
+                    class="flex  h-5/6 border-2 rounded-lg h-full border-gray-200 border-opacity-50 p-5 sm:flex-row flex-col">
+                    <div class="flex-grow overflow-scroll">
+                      <h2 class="text-white text-lg title-font font-medium mb-2">Description</h2>
+                      <p id="description" class="leading-relaxed text-gray-200 text-base"></p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="p-1 h-full lg:w-1/2 md:w-full">
+                  <div
+                    class="flex border-2 rounded-lg h-full border-gray-200 border-opacity-50 p-5 sm:flex-row flex-col">
+                    <div class="flex-grow overflow-scroll">
+                      <h2 class="text-white text-lg title-font font-medium mb-2">Rules</h2>
+                      <p class="leading-relaxed text-gray-200 text-base">
+                      <ul id="rule-list">
+
+                      </ul>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div id="contact-modal"
+                  class="contact-modal animate__animated animate__zoomIn absolute flex flex-col justify-center items-center bg-green-500 rounded-full sm:mb-5 lg:w-56 sm:w-max h-56 sm:py-2 sm:px-2 hidden">
+                  <h4 id="contact-name-1" class="text-gray-900 font-bold"></h4>
+                  <p id="contact-number-1" class="text-gray-900"></p>
+                  <button
+                    class="flex btn-contact-close mt-2 w-8 h-8 rounded-full bg-red-600 text-white justify-center items-center"><img
+                      src="images/close.svg" class="w-2 text-white"></button>
+                  <h4 id="contact-name-2" class="text-gray-900 font-bold"></h4>
+                  <p id="contact-number-2" class="text-gray-900"></p>
+                </div>
+
+              </div>
+              <button
+                class="flex btn-contact w-16 h-16 rounded-full absolute bg-green-500 text-white justify-center items-center mt-10"><img
+                  src="images/phone.svg" class="w-8 text-white"></button>
+              <button
+                class="flex btn-close w-8 h-8 rounded-full absolute bg-red-600 text-white justify-center items-center"><img
+                  src="images/close.svg" class="w-2 text-white"></button>
+            </div>
+
+          </section>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+
+  <footer class="text-white body-font">
+    <div class="mb-5" id="backToTop" style="margin-top:50px;">
+      <a href="#">
+        <img src="/image/backToToppc.png" alt="backToTop" style="width: 100%; margin-top: 365px;">
+
+      </a>
+    </div>
+    <div
+      class="container px-5 py-24 mx-auto flex justify-evenly align-center md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+
+      <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+        <a href="" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+          <img class="logo" src="images/pragya_logo.png" alt="">
+          <!-- <span class="ml-3 text-xl">Pragyaa-2K21</span> -->
+        </a>
+        <p class="mt-2 text-sm text-white">© Pragyaa-2K21</p>
+      </div>
+
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-xl mb-3">Get To Know Us</h2>
+        <nav class="list-none mb-10 text-base">
+          <li>
+            <a href="/index.html#Aboutus" class="text-white hover:text-gray-100">About Us</a>
+          </li>
+          <li>
+            <a href="/footer/memory.html" class="text-white hover:text-gray-100">Memories</a>
+          </li>
+          <li>
+            <a href="/index.html#contact" class="text-white hover:text-gray-100">Contact Us</a>
+          </li>
+        </nav>
+      </div>
+
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-xl mb-3">Connect With Us</h2>
+        <nav class="list-none mb-10 text-base">
+          <li>
+            <a href="https://www.facebook.com/sggspragyaa" class="text-white hover:text-gray-100">Facebook</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/sggspragyaa" class="text-white hover:text-gray-100">Instagram</a>
+          </li>
+          <li>
+            <a href=https://www.youtube.com/channel/UCstfr9-SA5jZLrgaUR2NJJg""
+              class="text-white hover:text-gray-100">Youtube</a>
+          </li>
+          <li>
+            <a href="https://twitter.com/sggspragyaa" class="text-white hover:text-gray-100">Tweeter</a>
+          </li>
+          <li>
+            <a href="https://t.me/sggspragyaa" class="text-white hover:text-gray-100">Telegram</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/pragyaa-sggs-647a341a0/" class="text-white hover:text-gray-100">Telegram</a>
+          </li>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/cenfest.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+/* font awesome icon free */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+
+body {
+	/* font-family: "Fira Sans", sans-serif; */
+	background-image: url(/image/background.jpg);
+	margin: 85px 0;
+}
+a:link{
+    text-decoration: none;
+    color: white;
+}
+a:visited{
+    text-decoration: none;
+    color: wheat;
+}
+.pragyaalogo{
+    height: 70px;
+    width: 70px;
+}
+.fa{
+    color: white;
+}
+/* Start Gallery CSS */
+.gallery{
+    margin-top: 250px;
+}
+.thumb {
+	margin-bottom: 15px;
+}
+.thumb:last-child {
+	margin-bottom: 0;
+}
+/* CSS Image Hover Effects: https://www.nxworld.net/tips/css-image-hover-effects.html */
+.thumb 
+figure img {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.thumb 
+figure:hover img {
+  -webkit-filter: grayscale(0);
+  filter: grayscale(0);
+}

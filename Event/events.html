@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' >
+    <title>Events</title>
+    <link href="css/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <style>
+      @import url('http://fonts.cdnfonts.com/css/batman-forever');
+
+         body{
+            background-image: url('images/background.jpg');
+        }
+        .pragyatitle{
+    font-family: 'BatmanForeverOutline', sans-serif;
+}
+        .logo{
+          height: 70px;
+          width: 70px;
+        }
+        #menu-toggle:checked + #menu {
+        display: block;
+      }
+      header{
+        background-color: 	rgb(31, 33, 34);
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body>
+
+  <header class="z-10 text-white fixed w-screen top-0 lg:px-8 px-6 flex flex-wrap items-center py-2">
+      <div class="flex-1 flex items-center">
+        <a href="#">
+          <img class="logo" src="../image/pragyaapng.png" alt="Pragyaa Logo">
+      </a>
+      <span class="ml-3 text-xl pragyatitle">Pragyaa-2K21</span>
+    </div>
+
+    <label for="menu-toggle" class="pointer-cursor lg:hidden block"><svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
+    <input class="hidden" type="checkbox" id="menu-toggle" />
+
+    <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+      <nav>
+        <ul class="lg:flex items-center justify-between text-white pt-4 lg:pt-0">
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="/index.html">HOME</a></li>
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="/Event/events.html">EVENTS</a></li>
+          <!-- <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="#">Hospitality</a></li> -->
+          
+          <div class="lg:p-4 py-3 px-0 flex items-center">
+            <div x-data="{ dropdownOpen: false }" class="relative">
+              <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block rounded focus:outline-none">
+                SPONSORSHIP
+              </button>
+          
+              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+          
+              <div x-show="dropdownOpen" class="absolute left-0 mt-2 w-48 bg-white rounded-md overflow-hidden shadow-xl z-20">
+                <a href="/sponsor/sponsers.html" class="block px-4 py-2 text-sm font-bold text-white bg-blue-500">Sponsors</a>
+                <a href="/sponsor/Why sponser us.html" class="block px-4 py-2 text-sm font-bold text-white bg-blue-500">Why Sponsor Us?</a>
+                <a href="/sponsor/fund_as_alumini.pdf" class="block px-4 py-2 text-sm font-bold text-white bg-blue-500">Fund Us Through</a>
+              </div>
+            </div>
+          </div>
+
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="/Event/ourteam.html">OUR TEAM</a></li>
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="/Registration/registration2 (1).html">REGISTRATION</a></li>
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="/index.html#workshop">LECTURE SERIES</a></li>
+          <!-- <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="/Home/home.html#contact">Contact Us</a></li> -->
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100 lg:mb-0 mb-2" href="/index.html#Aboutus">ABOUT US</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    </header>
+
+    <!-- <div class="mt-28 mb-20">
+      <h1 class="text-5xl flex justify-center align-center text-white">Comming Soon</h1>
+    </div> -->
+
+    <section class="text-gray-400 body-font overflow-hidden mt-28">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20 animate__animated animate__backInDown">
+            <h1 class="text-6xl font-medium title-font mb-2 text-gray-100">Comming Soon</h1>
+            <!-- <h1 class="text-6xl font-medium title-font mb-2 text-gray-100">Events</h1> -->
+          </div>
+
+          <!-- <div class="flex flex-wrap -m-4">
+
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full card animate__animated">
+              <div class="h-full p-6 rounded-lg border-2 border-blue-500 flex flex-col relative overflow-hidden">
+                <h1 class="text-5xl text-gray-100 leading-none flex items-center pb-4 mb-4 border-b border-blue-500">
+                  <span>CODESTER</span>
+                </h1>
+                <p class="flex items-center text-gray-400 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Code In Less
+                </p>
+                <p class="flex items-center text-gray-400 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Reverse Coding
+                </p>
+                <p class="flex items-center text-gray-400 mb-2">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>App Idea
+                </p>
+                <p class="flex items-center text-gray-400 mb-6">
+                  <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                    <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                      <path d="M20 6L9 17l-5-5"></path>
+                    </svg>
+                  </span>Code Talk
+                </p>
+                <a href="codester.html" class="flex items-center mt-auto text-white bg-blue-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-blue-600 rounded">Explore More
+                  <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                    <path d="M5 12h14M12 5l7 7-7 7"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+        
+            <div class="p-4 xl:w-1/4 md:w-1/2 w-full card animate__animated">
+                <div class="h-full p-6 rounded-lg border-2 border-blue-500 flex flex-col relative overflow-hidden">
+                  <h1 class="text-5xl text-gray-200 leading-none flex items-center pb-4 mb-4 border-b border-blue-500">
+                    <span>CENFEST</span>
+                  </h1>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Master Blocks
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Civil Innovators PPT
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Build it up
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Civi-Q
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-6">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Civil Contractor's League
+                  </p>
+                  <a href="cenfest.html" class="flex items-center mt-auto text-white bg-blue-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-blue-600 rounded">Explore More
+                    <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="p-4 xl:w-1/4 md:w-1/2 w-full card animate__animated">
+                <div class="h-full p-6 rounded-lg border-2 border-blue-500 flex flex-col relative overflow-hidden">
+                  <h1 class="text-5xl text-gray-200 leading-none flex items-center pb-4 mb-4 border-b border-blue-500">
+                    <span>CHEMTREK</span>
+                  </h1>
+
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Threaded Ideas
+                  </p>
+                  
+                  <p class="flex items-center text-gray-400 mb-6">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Technochem
+                  </p>
+
+                  <a href="chemtrek.html" class="flex items-center mt-auto text-white bg-blue-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-blue-600 rounded">Explore More
+                    <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="p-4 xl:w-1/4 md:w-1/2 w-full card animate__animated">
+                <div class="h-full p-6 rounded-lg border-2 border-blue-500 flex flex-col relative overflow-hidden">
+                  <h1 class="text-5xl text-gray-200 leading-none flex items-center pb-4 mb-4 border-b border-blue-500">
+                    <span>ELECHROMA</span>
+                  </h1>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-400 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Tricky Circuits
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Papel Electrica
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Circuital Dilemma
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Lit Up Here
+                  </p>
+                  <a href="elechroma.html" class="flex items-center mt-auto text-white bg-blue-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-blue-600 rounded">Explore More
+                    <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="p-4 xl:w-1/4 md:w-1/2 w-full card animate__animated">
+                <div class="h-full p-6 rounded-lg border-2 border-blue-500 flex flex-col relative overflow-hidden">
+                  <h1 class="text-5xl text-gray-200 leading-none flex items-center pb-4 mb-4 border-b border-blue-500">
+                    <span>Mechatron</span>
+                  </h1>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Cadwar
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Swipe Your Slide
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Mechwiz
+                  </p>
+                  <a href="mechatron.html" class="flex items-center mt-auto text-white bg-blue-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-blue-600 rounded">Explore More
+                    <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="p-4 xl:w-1/4 md:w-1/2 w-full card animate__animated">
+                <div class="h-full p-6 rounded-lg border-2 border-blue-500 flex flex-col relative overflow-hidden">
+                  <h1 class="text-5xl text-gray-200 leading-none flex items-center pb-4 mb-4 border-b border-blue-500">
+                    <span>Creative Events</span>
+                  </h1>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Mock Placement
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Knowledge Hunt
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Hunky Brains
+                  </p>
+
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-tranperent text-white rounded-full flex-shrink-0">
+                    </span>And More...
+                  </p>
+                  <a href="creative-events.html" class="flex items-center mt-auto text-white bg-blue-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-blue-600 rounded">Explore More
+                    <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="p-4 xl:w-1/4 md:w-1/2 w-full card animate__animated">
+                <div class="h-full p-6 rounded-lg border-2 border-blue-500 flex flex-col relative overflow-hidden">
+                  <h1 class="text-5xl text-gray-200 leading-none flex items-center pb-4 mb-4 border-b border-blue-500">
+                    <span>Online Events</span>
+                  </h1>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Face The Nation
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>House of Mini-Movies
+                  </p>
+                  <a href="online-events.html" class="flex items-center mt-auto text-white bg-blue-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-blue-600 rounded">Explore More
+                    <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+              <div class="p-4 xl:w-1/4 md:w-1/2 w-full card animate__animated">
+                <div class="h-full p-6 rounded-lg border-2 border-blue-500 flex flex-col relative overflow-hidden">
+                  <h1 class="text-5xl text-gray-200 leading-none flex items-center pb-4 mb-4 border-b border-blue-500">
+                    <span>Gaming Zone</span>
+                  </h1>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>FAU-G
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Call-Of-Duty
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Freefire
+                  </p>
+                  <p class="flex items-center text-gray-400 mb-2">
+                    <span class="w-4 h-4 mr-2 inline-flex items-center justify-center bg-blue-500 text-white rounded-full flex-shrink-0">
+                      <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" class="w-3 h-3" viewBox="0 0 24 24">
+                        <path d="M20 6L9 17l-5-5"></path>
+                      </svg>
+                    </span>Counter Strike-GO
+                  </p>
+                  <a class="flex items-center mt-auto text-white bg-blue-500 border-0 py-2 px-4 w-full focus:outline-none hover:bg-blue-600 rounded">Explore More
+                    <svg fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-auto" viewBox="0 0 24 24">
+                      <path d="M5 12h14M12 5l7 7-7 7"></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+
+          </div> -->
+        </div>
+      </section>
+
+      <footer class="text-white body-font">
+        <div class="mb-5" id="backToTop" style="margin-top:50px;">
+          <a href="#">
+              <img src="/image/backToToppc.png" alt="backToTop" style="width: 100%; margin-top: 20px;">
+  
+          </a>
+      </div>
+        <div class="container px-5 py-24 mx-auto flex justify-evenly align-center md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+  
+          <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+            <a href="" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+              <img class="logo" src="/image/pragyaapng.png" alt="">
+              <!-- <span class="ml-3 text-xl">Pragyaa-2K21</span> -->
+            </a>
+            <p class="mt-2 text-sm text-white">© Pragyaa-2K21</p>
+          </div>
+  
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-white tracking-widest text-xl mb-3">Get To Know Us</h2>
+              <nav class="list-none mb-10 text-base">
+                <li>
+                  <a href="/index.html#Aboutus" class="text-white hover:text-gray-100">About Us</a>
+                </li>
+                <li>
+                  <a href="/footer/memory.html" class="text-white hover:text-gray-100">Memories</a>
+                </li>
+                <li>
+                  <a href="/index.html#contact" class="text-white hover:text-gray-100">Contact Us</a>
+                </li>
+              </nav>
+            </div>
+  
+            <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+              <h2 class="title-font font-medium text-white tracking-widest text-xl mb-3">Connect With Us</h2>
+              <nav class="list-none mb-10 text-base">
+                <li>
+                  <a href="https://www.facebook.com/sggspragyaa" class="text-white hover:text-gray-100">Facebook</a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/sggspragyaa" class="text-white hover:text-gray-100">Instagram</a>
+                </li>
+                <li>
+                  <a href=https://www.youtube.com/channel/UCstfr9-SA5jZLrgaUR2NJJg"" class="text-white hover:text-gray-100">Youtube</a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/sggspragyaa" class="text-white hover:text-gray-100">Tweeter</a>
+                </li>
+                <li>
+                  <a href="https://t.me/sggspragyaa" class="text-white hover:text-gray-100">Telegram</a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/pragyaa-sggs-647a341a0/" class="text-white hover:text-gray-100">Linkedin</a>
+                </li>
+              </nav>
+            </div>
+        </div>
+      </footer>
+
+      <script src="js/event.js"></script>
+</body>
+</html>

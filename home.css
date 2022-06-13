@@ -1,0 +1,282 @@
+/* font awesome icon free */
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/batman-forever');
+
+body{
+    /* background-image: url(/hospitality/xyz.jpeg); */
+    background-image: url(/image/background.jpg);
+    font-family: Bahnschrift;
+}
+.color{
+    color: white;
+}
+.pragya-font{
+    font-size: larger;
+        z-index: 10;
+        font-family: bat;
+        font-family: 'BatmanForeverOutline', sans-serif;
+        font-family: 'BatmanForeverAlternate', sans-serif;
+        }
+
+        
+/* Banner */
+
+.wht{
+    color: rgb(18, 212, 115);
+}
+
+
+body.is-loading #banner > .inner {
+    opacity: 0;
+    -moz-transform: translateY(1em);
+    -webkit-transform: translateY(1em);
+    -ms-transform: translateY(1em);
+    transform: translateY(1em);
+}
+
+#banner {
+    display: -ms-flexbox;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    padding: 8em 0 6em 0;
+    -moz-align-items: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    min-height: 75vh;
+    height: 75vh;
+    position: relative;
+    background: #000;
+    background-image: url("/image/20\ Really\ Useful\ UI\ Animation\ Tutorials\ Every\ Designer\ Should\ Know.gif");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: center;
+    color: #FFF;
+    height: 700px;
+}
+
+    #banner:before {
+        -moz-transition: opacity 3s ease;
+        -webkit-transition: opacity 3s ease;
+        -ms-transition: opacity 3s ease;
+        transition: opacity 3s ease;
+        -moz-transition-delay: 0.25s;
+        -webkit-transition-delay: 0.25s;
+        -ms-transition-delay: 0.25s;
+        transition-delay: 0.25s;
+        content: '';
+        display: block;
+        background-color: #000;
+    
+        height: 100%;
+        left: 0;
+        opacity: 0.65;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
+
+    #banner .inner {
+        -moz-transform: none;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        -moz-transition: opacity 1s ease, transform 1s ease;
+        -webkit-transition: opacity 1s ease, transform 1s ease;
+        -ms-transition: opacity 1s ease, transform 1s ease;
+        transition: opacity 1s ease, transform 1s ease;
+        position: relative;
+        opacity: 1;
+        z-index: 3;
+        padding: 0 2em;
+    }
+
+    #banner h1 {
+        font-size: 4em;
+        line-height: 1em;
+        margin: 0 0 0.5em 0;
+        padding: 0;
+        color: #FFF;
+    }
+
+    #banner p {
+        font-size: 1.5em;
+        margin-bottom: 1.75em;
+    }
+
+    #banner a {
+        color: #FFF;
+        text-decoration: none;
+    }
+
+    @media screen and (max-width: 1280px) {
+
+        #banner h1 {
+            font-size: 3.5em;
+        }
+
+    }
+
+    @media screen and (max-width: 736px) {
+
+        #banner {
+            background-attachment: scroll;
+            background-image: url("/image/20\ Really\ Useful\ UI\ Animation\ Tutorials\ Every\ Designer\ Should\ Know.gif");
+            
+        }
+
+            #banner h1 {
+                font-size: 2.25em;
+            }
+
+            #banner p {
+                font-size: 1.25em;
+            }
+            #banner .p-logo{
+                width:auto;
+                height:auto;
+                margin: 0%;
+
+            }
+
+            .whatsapp {
+                position: fixed;
+                right: 10px;
+                z-index: 9000;
+                top: 95%;
+            }
+            .whatsapp h5 {
+                color: rgb(32, 221, 25);
+                background: #20b20f;
+                padding: 5px;
+                
+                border-radius: 5px;
+            }
+
+
+
+
+    }
+
+a:link{
+    color: white;
+    text-decoration: none;
+}
+a:visited{
+    color: white;
+    text-decoration: none;
+}
+.college{
+    text-align: center;
+    color: white;
+}
+.sggslogo{
+    float: right;
+    height: 100px;
+    width: 100px;
+    margin-right: 50px;
+}
+.pragyaa{
+    float: left;
+    height: 120px;
+    width: 120px;
+}
+.pragyaa-heading{
+    text-align: center;
+}
+.pragyaalogo{
+    height: 80px;
+    width: 80px;
+}
+/* .navbar{
+    height: 30px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+} */
+.college{
+    text-align: center;
+    color: white;
+}
+.sggslogo{
+    float: right;
+    height: 100px;
+    width: 100px;
+    margin-right: 50px;
+}
+.pragyaa{
+    float: left;
+    height: 120px;
+    width: 120px;
+}
+.pragyaa-heading{
+    text-align: center;
+}
+/* .navbar{
+    height: 60px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+}
+.nav-item{
+    font-size: 30px;
+} */
+.changing-images{
+    margin-top: 20px;
+    
+    /* margin-left: 20px;
+    margin-right: 20px; */
+}
+.contact{
+    margin-top: auto;
+}
+.fa{
+    color: white;
+}
+
+
+
+.head{
+    display: flex;
+    flex-direction: row;
+}
+
+
+@media screen and (max-width: 720px){
+    .head{
+        margin-top: 8rem;
+        flex-direction: column;
+    }
+
+    .collage-logo{
+        display: none;
+    }
+
+    .top-section{
+        width: 100%;
+    }
+}
+.whatsapp {
+    position: fixed;
+    right: 10px;
+    z-index: 9000;
+    top: 80%;
+}
+.whatsapp h5 {
+    color: rgb(32, 221, 25);
+    background: #20b20f;
+    padding: 5px;
+    
+    border-radius: 5px;
+}

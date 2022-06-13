@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <title>Registration</title>
+    <link rel="stylesheet" href="registration.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <!-- nav start -->
+    <div class="nav">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"> <img src="/image/pragyaapng.png" alt="pragyaa-logo"
+                        class="pragyaalogo"> Pragyaa-2K21</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div style="text-align: right;">
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="/index.html">HOME &nbsp;</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/Event/events.html">EVENTS &nbsp;</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link active" href="#">Hospitality &nbsp;</a>
+                            </li> -->
+                            <li class="nav-item active dropdown">
+                                <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    SPONSORSHIPS
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item active" href="/sponsor/sponsers.html">Sponsors</a></li>
+                                    <li><a class="dropdown-item active" href="/sponsor/Why sponser us.html">Why sponsor us?</a></li>
+                                    <li><a class="dropdown-item active" href="/sponsor/fund_as_alumini.pdf">Fund us through</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/Event/ourteam.html">OUR TEAM &nbsp;</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/Registration/registration2 (1).html">REGISTRATION
+                                    &nbsp;</a>
+                            </li>,
+                            <li class="nav-item">
+                                <a class="nav-link active" href="/index.html#workshop">LECTURE SERIES &nbsp;</a>
+                            </li>
+                            <!-- <li class="nav-item">
+                                <a class="nav-link active" href="#">Workshop &nbsp;</a>
+                            </li> -->
+                            <!-- <li class="nav-item">
+                                <a class="nav-link active" href="/Home/home.html#contact">CONTACTS &nbsp;</a>
+                            </li>
+                            <li class="nav-item"> -->
+                                <a class="nav-link active" href="/index.html#Aboutus">ABOUT US &nbsp;</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- nav end -->
+
+    <div class="warning">
+        <marquee direction="left" height="80px" scrollamount="50%">
+
+        </marquee>
+        <p class="blink"> Registration are Closed for Now. </p>
+    </div>
+    <div class="regform">
+        <h1> REGISTRATION FORM </h1>
+    </div>
+    <div class="main">
+        <form action="connect.php" method="POST"> 
+            <div id="name">
+                <h2 class="name">Name</h2>
+                <input class="firstname" type="rext" name="first_name" placeholder="First Name" required>
+                <input class="lastname" type="text" name="last_name" placeholder="Last Name">
+            </div>
+
+            <div class="college-con">
+                <h2 class="name">College </h2>
+                <input class="company" type="text" name="company" required>
+            </div>
+
+            <div class="email-con">
+                <h2 class="name">Email id </h2>
+                <input class="email" type="email" name="email" required>
+            </div>
+
+            <div class="phone-con">
+                <h2 class="name">Phone</h2>
+                <input class="number" type="text" name="phone" placeholder="Phone Number" required>
+            </div>
+
+            <div class="event-con">
+                <h2 class="name">Events</h2>
+                <select class="option" name="subject" >
+                    <option disabled="disabled" selected="selected "> --Choose Option</option>
+                    <option>Event 1</option>
+                    <option>Event 2</option>
+                    <option>Event 3</option>
+                    <option>Event 4</option>
+                </select>
+            </div>
+
+            <button type="submit" class="button" >REGISTER </button>
+
+
+        </form>
+
+    </div>
+
+    
+    <!-- footer start -->
+    <div class="mb-5" id="backToTop" style="margin-top:50px;">
+        <a href="#">
+            <img src="/image/backToToppc.png" alt="backToTop" style="width: 100%; margin-top: 50px;">
+
+        </a>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row mx-auto">
+                <div class="col-md col-12 footer-div text-muted">
+                    <img src="/image/pragyaapng.png" alt="Pragyaa-2K21" style="height: 100px; width: 100px;">
+                    <p class="text-muted" style="color: antiquewhite;">&copy;Pragyaa-2K21</p>
+                </div>
+                <div class="col-md col-12 footer-div">
+                    <h4 style="color: aliceblue;">Get to know us</h4><br>
+                    <p><a href="/index.html#Aboutus">About Us</a></p>
+                    <!-- <p><a href="#">Initiatives</a></p> -->
+                    <p><a href="/footer/memory.html">Memories</a></p>
+                    <!-- <p><a href="#">Media</a></p> -->
+                    <p><a href="../Event/ourteam.html">Contact Us</a></p>
+
+                </div>
+                <div class="col-md col-12 footer-div">
+                    <h4 style="color: aliceblue;">Connect with us</h4><br>
+                    <p><i class="fa fa-facebook"><a href="https://www.facebook.com/sggspragyaa" target="_blank">
+                        &nbsp Facebook</a></i></p>
+                    <p> <i class="fa fa-instagram"> <a href="https://www.instagram.com/sggspragyaa" target="_blank">
+                        &nbsp Instagram</a></i></p>
+                    <p> <i class="fa fa-youtube"> <a href="https://www.youtube.com/channel/UCstfr9-SA5jZLrgaUR2NJJg"
+                                target="_blank"> &nbsp Youtube</a></i></p>
+                    <p> <i class="fa fa-twitter"> <a href="https://twitter.com/sggspragyaa" target="_blank">
+                        &nbsp Twitter</a></i></p>
+                    <p> <i class="fa fa-telegram"> <a href="https://t.me/sggspragyaa" target="_blank"> &nbsp Telegram</a></i>
+                    </p>
+                    <p> <a href="https://www.linkedin.com/in/pragyaa-sggs-647a341a0/" target="_blank"><i class="fa fa-linkedin"> &nbsp  Linkedin </i></a>
+                    </p>
+                </p>
+                </div>
+                <!-- <div class="col-md col-12 footer-div">
+                    <h4 style="color: aliceblue;">Legals</h4>
+                    <p><a href="#">Terms &amp; Conditions</a></p>
+                    <p><a href="#">Privacy</a></p>
+                </div> -->
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-md-12">
+                <img class="" src="imgs/final_logo.png" alt=""
+                    style="display: block; margin-right: auto; margin-left: auto;width: 100px;">
+            </div>
+            <div class="col-md-12 text-center">
+            </div>
+        </div> -->
+    </footer>
+    <!-- footer end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

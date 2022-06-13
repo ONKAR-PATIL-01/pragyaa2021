@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' >
+    <link rel="stylesheet" href="css/tailwind.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <title>OUR team</title>
+    <style>
+
+      @font-face {
+          font-family: 'Bahnschrift';
+          src: url('./font/Bahnschrift.woff') format('woff');
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+      }
+
+      @font-face {
+            font-family: 'BatmanForeverAlternate';
+            src: url('./font/BatmanForeverAlternate.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body{
+            overflow-x:hidden;
+            width: 100%;
+            background-image: url('images/background.jpg');
+            background-size: cover;
+            font-family: 'Bahnschrift';
+        }
+        .ot-card-sponsorship{
+          max-width: 100%;
+        }
+        .logo{
+          height: 70px;
+          width: 70px;
+        }
+        #menu-toggle:checked + #menu {
+        display: block;
+      }
+      header{
+        background-color: 	rgb(31, 33, 34);
+      }
+      .header-title{
+          font-family: 'BatmanForeverAlternate';
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body>
+    
+    <header class="z-10 text-white fixed w-screen top-0 lg:px-8 px-6 flex flex-wrap items-center py-2">
+      <div class="flex-1 flex items-center">
+        <a href="#">
+          <img class="logo" src="../image/pragyaapng.png" alt="Pragyaa Logo">
+      </a>
+      <span class="ml-3 text-xl header-title">Pragyaa-2K21</span>
+    </div>
+
+    <label for="menu-toggle" class="pointer-cursor lg:hidden block"><svg class="fill-current text-white" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><title>menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></label>
+    <input class="hidden" type="checkbox" id="menu-toggle" />
+
+    <div class="hidden lg:flex lg:items-center lg:w-auto w-full" id="menu">
+      <nav>
+        <ul class="lg:flex items-center justify-between text-white pt-4 lg:pt-0">
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="/index.html">HOME</a></li>
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="/Event/events.html">EVENTS</a></li>
+          <!-- <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="#">HOSPITALITY</a></li> -->
+          
+          <div class="lg:p-4 py-3 px-0 flex items-center">
+            <div x-data="{ dropdownOpen: false }" class="relative">
+              <button @click="dropdownOpen = !dropdownOpen" class="relative z-10 block rounded focus:outline-none">
+                SPONSORSHIP
+              </button>
+          
+              <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+          
+              <div x-show="dropdownOpen" class="absolute left-0 mt-2 w-48 bg-white rounded-md overflow-hidden shadow-xl z-20">
+                <a href="/sponsor/sponsers.html" class="block px-4 py-2 text-sm font-bold text-white bg-blue-500">Sponsors</S></a>
+                <a href="/sponsor/Why sponser us.html" class="block px-4 py-2 text-sm font-bold text-white bg-blue-500">Why Sponsor Us?</a>
+                <a href="/sponsor/fund_as_alumini.pdf" class="block px-4 py-2 text-sm font-bold text-white bg-blue-500">Fund Us Through</a>
+              </div>
+            </div>
+          </div>
+
+
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="#">OUR TEAM</a></li>
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="/Registration/registration2 (1).html">REGISTRATION</a></li>
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="/index.html#lecture">LECTURE SERIES</a></li>
+          <!-- <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100" href="/Home/home.html#contact">CONTACT US</a></li> -->
+          <li><a class="lg:p-4 py-3 px-0 block border-b-2 border-transparent hover:text-gray-100 lg:mb-0 mb-2" href="/index.html#Aboutus">ABOUT US</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    </header>
+
+    <div class="main mt-28">
+
+        <div class="flex flex-col text-center w-full mt-10">
+          <h1 class="text-6xl font-medium title-font mb-8 text-white">TEAM PRAGYAA</h1>
+        </div>
+
+        <section class="flex align-center justify-center text-gray-600 body-font mb-6 flex-col sm:flex-row">
+
+          <div class="m-5 bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+            <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+              <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/SHUBHAM BHIKASING GHOTI.png">
+              <div class="w-full">
+                <h2 class="title-font font-medium text-lg text-gray-50">Shubham Ghoti</h2>
+                <h3 class="text-gray-500">Technical Secretary</h3>
+                <h3 class="text-gray-500">Mob 9112335388</h3>
+
+              </div>
+            </div>
+          </div>
+
+        </section>
+          
+
+        <section class="flex align-center justify-center text-gray-600 body-font mb-6 flex-col sm:flex-row">
+
+          <div class="m-5 bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+            <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+              <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 lg:object-contain sm:object-cover object-center mb-4" src="images/team/yash kala.png">
+              <div class="w-full">
+                <h2 class="title-font font-medium text-lg text-gray-50">Yash Kala</h2>
+                <h3 class="text-gray-500">Student's Joint Coordinator</h3>
+                <h3 class="text-gray-500">Mob: 7020753498</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="m-5 bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+            <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+              <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 lg:object-contain sm:object-cover object-center mb-4" src="images/team/Mk - Mangesh Kale.png">
+              <div class="w-full">
+                <h2 class="title-font font-medium text-lg text-gray-50">Mangesh Kale</h2>
+                <h3 class="text-gray-500 ">Student's Joint Coordinator</h3>
+                <h3 class="text-gray-500">Mob:9834019402</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="m-5 bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+            <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+              <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/20200103135410_IMG_0979 - aditi kadam.png">
+              <div class="w-full">
+                <h2 class="title-font font-medium text-lg text-gray-50">Aditi Kadam</h2>
+                <h3 class="text-gray-500 ">Student's Joint Coordinator</h3>
+                <h3 class="text-gray-500">Mob: 9423547276</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="w-11/12 h-0.5 bg-gray-400 mx-auto"></div>
+
+        <section class="text-gray-600 body-font">
+          <!-- Hospi -->
+            <div class="container px-5 pt-24 pb-10 mx-auto relative">
+              <h1 class="text-xl font-medium title-font text-center mb-4 text-white ml-2">Hospitality, Guest Management and Lecture Series</h1>
+
+            <section class="flex align-center justify-center text-gray-600 body-font mb-6 flex-col sm:flex-row">
+
+              <div class="m-5 bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+                <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                  <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG-20210306-WA0044 - anchal dhawale.png">
+                  <div class="w-full">
+                    <h2 class="title-font font-medium text-lg text-gray-50">Aanchal Dhawale</h2>
+                    <h3 class="text-gray-500 ">Main Co-ordinator</h3>
+                    <h3 class="text-gray-500">Mob: 9370711269</h3>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="m-5 bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+                <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                  <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 lg:object-contain sm:object-cover object-center mb-4" src="images/team/20200226_125755 - S JASRAJ SINGH GURUBACHAN SINGH BHOSIWALE.png">
+                  <div class="w-full">
+                    <h2 class="title-font font-medium text-lg text-gray-50">Jasraj Singh Bhosiwale</h2>
+                    <h3 class="text-gray-500 ">Main Co-ordinator</h3>
+                    <h3 class="text-gray-500">Mob: 9764135554</h3>
+                  </div>
+                </div>
+              </div>
+
+            </section>
+
+            <div class="relative">
+              <div class="ot-card-container-hospi flex flex-nowrap -m-4">          
+                <div class="ot-card-hospi m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG_2147 - SAKSHI SUNILKUMAR SABU.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Sakshi Sabu</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9403067337</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-hospi m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG-20210216-WA0052 - aarya wadje.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Aarya Wadje</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9420000718</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-hospi m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG_1800 - ABHAY SURESHRAO YEMEKAR.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Abhay Yemekar</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9579065125</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-hospi m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/2X1A7649 - HEMANT PRABHU SAJJAN.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Hemant Sajjan</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 8855831445</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-hospi m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG-20210217-WA0026 - Swarnim Mishra.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Swarnim Mishra</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 816965713</h3>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+                <div class="ot-prev-btn-hospi opacity-80 rounded-full p-5 absolute left-0 top-32">
+                  <button id="ot-prev-btn-hospi"><img src="images/left.svg" class="w-10 text-gray-400"></button>
+                </div>
+                <div class="ot-next-btn-hospi opacity-80 rounded-full p-5 absolute right-0 top-32">
+                  <button id="ot-next-btn-hospi"><img src="images/right.svg" class="w-10 text-gray-400"></button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="w-11/12 h-0.5 bg-gray-400 mx-auto"></div>
+
+          <!-- Event -->
+          <section class="text-gray-600 body-font">
+            <div class="container px-5 pt-24 pb-10 mx-auto relative">
+              <h1 class="text-xl font-medium title-font text-center mb-4 text-white ml-2">Event Affairs Committee</h1>
+
+              <section class="flex align-center justify-center text-gray-600 body-font mb-6 flex-col sm:flex-row">
+      
+                <div class="m-5 bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG-20210117-WA0014 - POOJA WADEKAR.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Pooja Wadekar</h2>
+                      <h3 class="text-gray-500">Main Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9860211143</h3>
+                    </div>
+                  </div>
+                </div>
+  
+              </section>
+
+              <div class="relative">
+
+              <div class="ot-card-container-event flex flex-nowrap -m-4">
+
+                <div class="ot-card-event m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/suruchi.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Suruchi Walthare</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 8956426701</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-event m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 lg:object-contain sm:object-cover object-center mb-4" src="images/team/IMG-20210305-WA0006 - AYUSH RAGHUNATHSINGH RANE.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Ayush Rane</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 7385570289</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-event m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG_20210219_164136 - Omkar Bele.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Omkar Bele</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 8421385993</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-event m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/Mukta sillodkar  - MUKTA GOPAL SILLODKAR.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Mukta Silodkar</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9130807173</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-event m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="../image/pratiksha munde.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Pratiksha Munde</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 8669541708</h3>
+                    </div>
+                  </div>
+                </div>
+
+                
+              </div>
+
+              <div class="ot-prev-btn-event opacity-80 rounded-full p-5 absolute left-0 top-32">
+                <button id="ot-prev-btn-event"><img src="images/left.svg" class="w-10 text-gray-400"></button>
+              </div>
+              <div class="ot-next-btn-event opacity-80 rounded-full p-5 absolute right-0 top-32">
+                <button id="ot-next-btn-event"><img src="images/right.svg" class="w-10 text-gray-900"></button>
+              </div>
+            </div>
+            </div>
+          </section>
+          <div class="w-11/12 h-0.5 bg-gray-400 mx-auto"></div>
+
+
+          <!-- Finance -->
+          <section class="text-gray-600 body-font">
+            <div class="container px-5 pt-24 pb-10 mx-auto relative">
+              <h1 class="text-xl font-medium title-font text-center mb-4 text-white ml-2">Finance Committee</h1>
+
+              <section class="flex align-center justify-center text-gray-600 body-font mb-6 flex-col sm:flex-row">
+      
+                <div class="m-5 bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/Mohit pethe Main finances - Mohit Pethe.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Mohit Pethe</h2>
+                      <h3 class="text-gray-500">Main Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 7038982479</h3>
+                    </div>
+                  </div>
+                </div>
+  
+              </section>
+
+              <div class="relative">
+              <div class="ot-card-container-finance flex flex-nowrap -m-4 lg:align-center lg:justify-center">
+
+                <div class="ot-card-finance m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 lg:object-contain sm:object-cover object-center mb-4" src="images/team/Screenshot_20210304-142539 - SARVESHA SACHIN BHATGARE.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Sarvesha Bhatgare</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 8668953689</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-finance m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/saurab.jpeg">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Saurabh Pachghare</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 7841983268</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-finance m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/123 - ANIRUDHA KISHOR WELUKAR.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Anirudha Welukar</h2>
+                      <h3 class="text-gray-500 ">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9175529809</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-finance m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/_aditya1708_20210305_232219_0 - ADITYA ASHOK BHOSALE.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Aditya Bhosale</h2>
+                      <h3 class="text-gray-500 ">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 8080171512</h3>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+              <div class="ot-prev-btn-finance opacity-80 rounded-full p-5 absolute left-0 top-32 lg:hidden">
+                <button id="ot-prev-btn-finance"><img src="images/left.svg" class="w-10 text-gray-400"></button>
+              </div>
+              <div class="ot-next-btn-finance opacity-80 rounded-full p-5 absolute right-0 top-32 lg:hidden">
+                <button id="ot-next-btn-finance"><img src="images/right.svg" class="w-10 text-gray-900"></button>
+              </div> 
+
+            </div>
+            </div>
+          </section>
+          <div class="w-11/12 h-0.5 bg-gray-400 mx-auto"></div>
+
+
+          <!-- Food -->
+          <section class="text-gray-600 body-font">
+            <div class="container px-5 pt-24 pb-10 mx-auto relative">
+              <h1 class="text-xl font-medium title-font text-center mb-4 text-white ml-2">Food & Site Committee</h1>
+
+              <section class="flex align-center justify-center text-gray-600 body-font mb-6 flex-col sm:flex-row">
+      
+                <div class="m-5 bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG_20210304_213222_370 - Harsh Chandak.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Harsh Chandak</h2>
+                      <h3 class="text-gray-500">Main Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 7410106545</h3>
+                    </div>
+                  </div>
+                </div>
+  
+              </section>
+
+
+
+              <div class="relative">
+
+              <div class="ot-card-container-food flex flex-nowrap -m-4">
+
+                <div class="ot-card-food m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/16126312540 - Sahil Sharma.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Sahil Sharma</h2>
+                      <h3 class="text-gray-500 ">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 6005729957</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-food m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 lg:object-contain sm:object-cover object-center mb-4" src="images/team/b_2 - RAMESHWAR NARAHARI PANTAMWAR.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Rameshwar Pantamwar</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 8624010455</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-food m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG_1698-01 - Jayesh Sonale.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Jayash Sonale</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 8208232498</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-food m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG_20210305_235348 - NIKITA PRATAPRAO WADJE.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Nikita Wadje</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 8483038411</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-food m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/InShot_20210305_234620860 - Shrikant Gavte.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Shrikant Gavte</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 8007745815</h3>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="ot-prev-btn-food opacity-80 rounded-full p-5 absolute left-0 top-32">
+                <button id="ot-prev-btn-food"><img src="images/left.svg" class="w-10 text-gray-400"></button>
+              </div>
+              <div class="ot-next-btn-food opacity-80 rounded-full p-5 absolute right-0 top-32">
+                <button id="ot-next-btn-food"><img src="images/right.svg" class="w-10 text-gray-900"></button>
+              </div>
+            </div>
+
+            </div>
+          </section>
+          <div class="w-11/12 h-0.5 bg-gray-400 mx-auto"></div>
+
+          <!-- Website -->
+          <section class="text-gray-600 body-font">
+            <div class="container px-5 pt-24 pb-10 mx-auto relative">
+              <h1 class="text-xl font-medium title-font text-center mb-4 text-white ml-2">Website, Advertisement and Multimedia Committee</h1>
+
+              <section class="flex align-center justify-center text-gray-600 body-font mb-6 flex-col sm:flex-row">
+      
+                <div class="m-5 bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/bhau.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Rushikesh Suradkar</h2>
+                      <h3 class="text-gray-500">Main Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9623319036 </h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="m-5 bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="../image/bagat.jpg">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Vaishnavi Bhagat</h2>
+                      <h3 class="text-gray-500">Main Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 8308875669</h3>
+                    </div>
+                  </div>
+                </div>
+  
+              </section>
+
+              <div class="relative">
+
+              <div class="ot-card-container-web flex flex-nowrap -m-4">
+
+                <div class="ot-card-web m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="../image/mahesh - Pragyaa Web.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Mahesh Wattamwar</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 7218232383</h3>
+                    </div>
+                  </div>
+                </div>
+                <div class="ot-card-web m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 lg:object-contain sm:object-cover object-center mb-4" src="images/team/Snapchat-961145834 - ANUSHKA DEEPAK PATIL.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Anushka Patil</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 7420865500</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-web m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG_20200503_073925 - ABHIJEET ANKUSHRAO SHINDE.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Abhijeet Shinde</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9158170083</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-web m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG_20201201_115607_083 - Atharva Mehetre.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Atharva Mehetre</h2>
+                      <h3 class="text-gray-500 ">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 8847745335</h3>
+                    </div>
+                  </div>
+                </div>
+
+               
+                <div class="ot-card-web m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/2021-03-06-17-50-45-454 - Chaittnya Shinde.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Chaitanya Shinde</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 7758885106</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-web m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG_20201209_175955 - Onkar Patil.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Onkar patil</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9503864627</h3>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="ot-prev-btn-web opacity-80 rounded-full p-5 absolute left-0 top-32">
+                <button id="ot-prev-btn-web"><img src="images/left.svg" class="w-10 text-gray-400"></button>
+              </div>
+              <div class="ot-next-btn-web opacity-80 rounded-full p-5 absolute right-0 top-32">
+                <button id="ot-next-btn-web"><img src="images/right.svg" class="w-10 text-gray-900"></button>
+              </div>
+            </div>
+
+            </div>
+          </section>
+          <div class="w-11/12 h-0.5 bg-gray-400 mx-auto"></div>
+
+          <!-- Public Relations Committee -->
+          <section class="text-gray-600 body-font">
+            <div class="container px-5 pt-24 pb-10 mx-auto relative">
+              <h1 class="text-xl font-medium title-font text-center mb-4 text-white ml-2">Public Relations Committee</h1>
+
+              <section class="flex align-center justify-center text-gray-600 body-font mb-6 flex-col sm:flex-row">
+      
+                <div class="m-5 bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/Photo from V Torkad - VAISHNAVI TORKAD.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Vaishnavi Torkad</h2>
+                      <h3 class="text-gray-500">Main Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 7038803247</h3>
+                    </div>
+                  </div>
+                </div>
+  
+              </section>
+
+              <div class="relative">
+
+              <div class="ot-card-container-pr flex flex-nowrap -m-4">
+
+                <div class="ot-card-pr m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 lg:object-contain sm:object-cover object-center mb-4" src="images/team/FARHAN JOINT(PRC) - FARHAN AHMED FAHEEM AHMED FAROOQUI.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Farhan Farooqui</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9970876790</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-pr m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/hitesh.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Hitesh Koli</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9075706930</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-pr m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG_20201108_190117_098 - Kapil Kale.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Kapil Kale</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 7030444135</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-pr m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/Prashant Govande  PRC JOINT CORRDINATOR_edited(sWNXYv5w1XP) - Prashant Govande.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Prashant Govande</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 7972221898</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-pr m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/k2.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Shivangi Katre</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9307412304</h3>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="ot-prev-btn-pr opacity-80 rounded-full p-5 absolute left-0 top-32">
+                <button id="ot-prev-btn-pr"><img src="images/left.svg" class="w-10 text-gray-400"></button>
+              </div>
+              <div class="ot-next-btn-pr opacity-80 rounded-full p-5 absolute right-0 top-32">
+                <button id="ot-next-btn-pr"><img src="images/right.svg" class="w-10 text-gray-900"></button>
+              </div>
+
+            </div>
+
+            </div>
+          </section>
+          <div class="w-11/12 h-0.5 bg-gray-400 mx-auto"></div>
+
+          <!-- Sponsorship committee -->
+          <section class="text-gray-600 body-font">
+            <div class="container px-5 pt-24 pb-10 mx-auto relative">
+              <h1 class="text-xl font-medium title-font text-center mb-4 text-white ml-2">Sponsorship committee</h1>
+
+              <section class="flex align-center justify-center text-gray-600 body-font mb-6 flex-col sm:flex-row">
+      
+                <div class="m-5 bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-full">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/20200912_001412 - Yogesh Krishnasai Tabjula.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Yogesh Tabjula Krishnasai</h2>
+                      <h3 class="text-gray-500">Main Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9326340673</h3>
+                    </div>
+                  </div>
+                </div>
+  
+              </section>
+
+              <div class="relative">
+
+              <div class="ot-card-container-sponsorship flex flex-nowrap -m-4 lg:align-center lg:justify-center">
+
+                <div class="ot-card-sponsorship m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 sm:w-screen">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/IMG_20210306_000240 - Pushkar Khawas.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Pushkar Khawas</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 7768860281</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-sponsorship m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 lg:object-contain sm:object-cover object-center mb-4" src="images/team/20200608_170231 - Samradnyi Deshpande.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Samradnyi Deshpande</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9373661868</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-sponsorship m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 object-cover object-center mb-4" src="images/team/Snehal Karade - SNEHAL SUNIL KARADE.jpg">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Snehal Karade</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9307821511</h3>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="ot-card-sponsorship m-5 flex-none bg-opacity-90 bg-gray-900 lg:w-1/5 md:w-1/2">
+                  <div class="h-full flex flex-col items-center text-center border border-gray-200 rounded-lg">
+                    <img alt="team" class="flex-shrink-0 rounded-lg rounded-b-none w-full h-56 lg:object-contain sm:object-cover object-center mb-4" src="images/team/Tanmay  Deshmukh spons joint  - Tanmay Deshmukh.png">
+                    <div class="w-full">
+                      <h2 class="title-font font-medium text-lg text-gray-50">Tanmay Deshmukh</h2>
+                      <h3 class="text-gray-500">Joint Co-ordinator</h3>
+                      <h3 class="text-gray-500">Mob: 9767097542</h3>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="ot-prev-btn-sponsorship opacity-80 rounded-full p-5 absolute left-0 top-32 lg:hidden">
+                <button id="ot-prev-btn-sponsorship"><img src="images/left.svg" class="w-10 text-gray-400"></button>
+              </div>
+              <div class="ot-next-btn-sponsorship opacity-80 rounded-full p-5 absolute right-0 top-32 lg:hidden">
+                <button id="ot-next-btn-sponsorship"><img src="images/right.svg" class="w-10 text-gray-900"></button>
+              </div> 
+            </div>
+
+            </div>
+          </section>
+    </div>
+
+    <div id="backToTop" style="margin-top:50px;">
+      <a href="#">
+          <img src="../image/backToToppc.png" alt="backToTop" style="width: 100%;">
+      </a>
+    </div>
+
+    <footer class="text-white body-font">
+      <div class="container px-5 py-24 mx-auto flex justify-evenly align-center md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+
+        <div class="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
+          <a href="" class="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
+            <img class="logo" src="../image/pragyaapng.png" alt="">
+            <!-- <span class="ml-3 text-xl">Pragyaa-2K21</span> -->
+          </a>
+          <p class="mt-2 text-sm text-white">© Pragyaa-2K21</p>
+        </div>
+
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 class="title-font font-medium text-white tracking-widest text-xl mb-3">Get To Know Us</h2>
+            <nav class="list-none mb-10 text-base">
+              <li>
+                <a href="/index.html#Aboutus" class="text-white hover:text-gray-100">About Us</a>
+              </li>
+              <li>
+                <a href="/footer/memory.html" class="text-white hover:text-gray-100">Memories</a>
+              </li>
+              <li>
+                <a href="/index.html#contact" class="text-white hover:text-gray-100">Contact Us</a>
+              </li>
+            </nav>
+          </div>
+
+          <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+            <h2 class="title-font font-medium text-white tracking-widest text-xl mb-3">Connect With Us</h2>
+            <nav class="list-none mb-10 text-base">
+              <li>
+                <a href="https://www.facebook.com/sggspragyaa" class="text-white hover:text-gray-100">Facebook</a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/sggspragyaa" class="text-white hover:text-gray-100">Instagram</a>
+              </li>
+              <li>
+                <a href=https://www.youtube.com/channel/UCstfr9-SA5jZLrgaUR2NJJg"" class="text-white hover:text-gray-100">Youtube</a>
+              </li>
+              <li>
+                <a href="https://twitter.com/sggspragyaa" class="text-white hover:text-gray-100">Tweeter</a>
+              </li>
+              <li>
+                <a href="https://t.me/sggspragyaa" class="text-white hover:text-gray-100">Telegram</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/pragyaa-sggs-647a341a0/" class="text-white hover:text-gray-100">Linkedin</a>
+              </li>
+            </nav>
+          </div>
+      </div>
+    </footer>
+
+    <script src="js/ourteam.js"></script>
+</body>
+</html>
+
+<!--
+                      <span class="inline-flex">
+                        <a class="text-gray-500">
+                          <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                          </svg>
+                        </a>
+                        <a class="ml-2 text-gray-500">
+                          <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+                          </svg>
+                        </a>
+                        <a class="ml-2 text-gray-500">
+                          <svg fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                            <path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"></path>
+                          </svg>
+                        </a>
+                      </span>
+
+-->

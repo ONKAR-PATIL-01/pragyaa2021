@@ -1,0 +1,13 @@
+body{
+    background-image: url(/image/background.jpg);
+    color: white;
+    font-family: Bahnschrift;
+
+}
+.color{
+    color: white;
+}
+.pragyaalogo{
+    height: 80px;
+    width: 80px;
+}
